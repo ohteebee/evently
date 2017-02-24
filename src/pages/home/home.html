@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Happen
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1 padding margin-bottom>
+    Welcome back {{user}}, we've missed you
+  </h1>
+
+  <ion-row>
+    <ion-col>
+      <a ion-button full (click)="createEvent()">Create Event</a>
+    </ion-col>
+    <ion-col>
+      <a ion-button full (click)="dashboard()">View your dashboard</a>
+    </ion-col>
+  </ion-row>
+</ion-content>

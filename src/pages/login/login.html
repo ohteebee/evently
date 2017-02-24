@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>Sign in</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <ion-item style="max-width: 400px;">
+      <ion-label>Remember me</ion-label>
+      <ion-checkbox checked="false"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="submit()">Login</button>
+</ion-content>

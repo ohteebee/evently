@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <h1>Get on your way to making money hosting events</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Company name</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Email address</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item style="max-width: 400px;">
+      <ion-label>Do you want to charge for your events?</ion-label>
+
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button full (click)="submit()">Get started now</button>
+    </ion-col>
+    <ion-col>
+
+      <button ion-button full (click)="login()">Login instead</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

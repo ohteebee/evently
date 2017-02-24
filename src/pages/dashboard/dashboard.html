@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <h3 margin-bottom>Upcoming events</h3>
+  <ion-list>
+    <!-- <ion-icon name="logo-twitter" item-left></ion-icon> -->
+    <h5 (click)="showEvent = !showEvent">
+      <ion-icon item-left *ngIf="!showEvent" name="arrow-down"></ion-icon>
+      <ion-icon item-left *ngIf="showEvent" name="arrow-up"></ion-icon>
+      {{event.name}} [{{event.participants.length}}/{{event.max}}]</h5>
+
+    <!-- each event goes here, toggles view or not -->  
+    <div *ngIf="showEvent">
+      <ion-item-sliding *ngFor="let part of event.participants">
+        <ion-item>
+          <h2>{{part.name}}</h2>
+          <p>
+            <strong>Paid</strong>
+            {{part.paid}}</p>
+          <p>
+            <strong>Dinner</strong>
+            {{mapDinner(part.options.dinner)}}</p>
+          <p>
+            <strong>Wine</strong>
+            {{mapDinner(part.options.wine)}}</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="primary">
+            <ion-icon name="mail"></ion-icon>
+            Email
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </div>
+  </ion-list>
+</ion-content>
